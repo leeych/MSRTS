@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/miseis/!svn/ver/889/mmps/trunk/RTS/MSRTS/data
+END
+mdataacquisition.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/miseis/!svn/ver/871/mmps/trunk/RTS/MSRTS/data/mdataacquisition.cpp
+END
+mrtsdatabase.h
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/miseis/!svn/ver/889/mmps/trunk/RTS/MSRTS/data/mrtsdatabase.h
+END
+mtrigger.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/miseis/!svn/ver/794/mmps/trunk/RTS/MSRTS/data/mtrigger.cpp
+END
+mdaandtriggerconnector.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/miseis/!svn/ver/551/mmps/trunk/RTS/MSRTS/data/mdaandtriggerconnector.cpp
+END
+mdataacquisition.h
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/miseis/!svn/ver/801/mmps/trunk/RTS/MSRTS/data/mdataacquisition.h
+END
+mtrigger.h
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/miseis/!svn/ver/794/mmps/trunk/RTS/MSRTS/data/mtrigger.h
+END
+mdaandtriggerconnector.h
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/miseis/!svn/ver/551/mmps/trunk/RTS/MSRTS/data/mdaandtriggerconnector.h
+END
+mrtsdatabase.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/miseis/!svn/ver/889/mmps/trunk/RTS/MSRTS/data/mrtsdatabase.cpp
+END

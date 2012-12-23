@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/miseis/!svn/ver/883/mmps/trunk/RTS/MSRTS/wizard/MTriggerCreateWizard
+END
+firstpage.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/miseis/!svn/ver/845/mmps/trunk/RTS/MSRTS/wizard/MTriggerCreateWizard/firstpage.cpp
+END
+fourthpage.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/miseis/!svn/ver/891/mmps/trunk/RTS/MSRTS/wizard/MTriggerCreateWizard/fourthpage.cpp
+END
+mtriggercreatewizard.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/miseis/!svn/ver/883/mmps/trunk/RTS/MSRTS/wizard/MTriggerCreateWizard/mtriggercreatewizard.cpp
+END
+thirdpage.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/miseis/!svn/ver/845/mmps/trunk/RTS/MSRTS/wizard/MTriggerCreateWizard/thirdpage.cpp
+END
+secondpage.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/miseis/!svn/ver/891/mmps/trunk/RTS/MSRTS/wizard/MTriggerCreateWizard/secondpage.cpp
+END
+firstpage.h
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/miseis/!svn/ver/845/mmps/trunk/RTS/MSRTS/wizard/MTriggerCreateWizard/firstpage.h
+END
+fourthpage.h
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/miseis/!svn/ver/845/mmps/trunk/RTS/MSRTS/wizard/MTriggerCreateWizard/fourthpage.h
+END
+mtriggercreatewizard.h
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/miseis/!svn/ver/883/mmps/trunk/RTS/MSRTS/wizard/MTriggerCreateWizard/mtriggercreatewizard.h
+END
+thirdpage.h
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/miseis/!svn/ver/845/mmps/trunk/RTS/MSRTS/wizard/MTriggerCreateWizard/thirdpage.h
+END
+secondpage.h
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/miseis/!svn/ver/891/mmps/trunk/RTS/MSRTS/wizard/MTriggerCreateWizard/secondpage.h
+END

@@ -1,0 +1,18 @@
+#ifndef CHANNELCOMBOBOX_H
+#define CHANNELCOMBOBOX_H
+
+#include <QComboBox>
+
+class ChannelComboBox : public QComboBox
+{
+    Q_OBJECT
+public:
+    explicit ChannelComboBox(QObject *parent = 0);
+    void setDisabled(bool);
+signals:
+    
+public slots:
+    
+};
+
+#endif // CHANNELCOMBOBOX_H

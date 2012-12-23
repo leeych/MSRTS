@@ -1,0 +1,26 @@
+#include "channelcombobox.h"
+#include <cstdlib>
+#include <ctime>
+
+ChannelComboBox::ChannelComboBox(QObject *parent) :
+    QComboBox((QWidget *)parent)
+{
+    this->addItem("trigger 01");
+    this->addItem("trigger 02");
+    this->addItem("trigger 03");
+    this->addItem("trigger 04");
+    this->addItem("None");
+
+    srand((unsigned)time(NULL));
+    int n = rand() % 5;
+    this->setCurrentIndex(n);
+}
+
+void ChannelComboBox::setDisabled(bool flag)
+{
+    if (flag)
+    {
+        this->setCurrentIndex(4);
+    }
+    this->setEnabled(!flag);
+}

@@ -1,0 +1,629 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{71ED8ED8-ACB9-4CE9-BBE1-E00B30144E11}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;moc;h;def;odl;idl;res;</Extensions>
+    </Filter>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{71ED8ED8-ACB9-4CE9-BBE1-E00B30144E11}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;moc;h;def;odl;idl;res;</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
+      <Extensions>qrc;*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
+      <Extensions>qrc;*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Translation Files">
+      <UniqueIdentifier>{639EADAA-A684-42e4-A9AD-28FC9BCB8F7C}</UniqueIdentifier>
+      <Extensions>ts;xlf</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Translation Files">
+      <UniqueIdentifier>{639EADAA-A684-42e4-A9AD-28FC9BCB8F7C}</UniqueIdentifier>
+      <Extensions>ts;xlf</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="wizard\MDataAcquisitionWizard\channelcombobox.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="wizard\MDataAcquisitionWizard\dafirstpage.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="wizard\MDataAcquisitionWizard\dafourthpage.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="wizard\MDataAcquisitionWizard\dasecondpage.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="wizard\MDataAcquisitionWizard\dathirdpage.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="devicedataacquisitionlist.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="devicemanagepage.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="devicetriggerlist.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="wizard\MTriggerCreateWizard\firstpage.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="wizard\MTriggerCreateWizard\fourthpage.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mainwindow.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="data\mdaandtriggerconnector.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="data\mdataacquisition.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="wizard\MDataAcquisitionWizard\mdataacquitionwizard.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="data\mrtsdatabase.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\mscrollarea.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\msplitter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\mtabwidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\mtitlewidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\mtopologylabel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\mtreewidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="data\mtrigger.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="wizard\MTriggerCreateWizard\mtriggercreatewizard.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mutility.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="propertywidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="rtwavewindow.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="rtwavewindowtitle.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="wizard\MTriggerCreateWizard\secondpage.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="statusinfowidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="systemstatusframe.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="test1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="wizard\MTriggerCreateWizard\thirdpage.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="topologydaitem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="topologypage.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="topologytriggeritem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="wizard\MDataAcquisitionWizard\triggerallocator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="wizard\MDataAcquisitionWizard\triggercomponentcombobox.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="wavetriggerwidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="MacroImage.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <CustomBuild Include="wizard\MDataAcquisitionWizard\channelcombobox.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="wizard\MDataAcquisitionWizard\dafirstpage.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="wizard\MDataAcquisitionWizard\dafourthpage.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="wizard\MDataAcquisitionWizard\dasecondpage.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="wizard\MDataAcquisitionWizard\dathirdpage.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="devicedataacquisitionlist.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="devicemanagepage.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="devicetriggerlist.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="wizard\MTriggerCreateWizard\firstpage.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="wizard\MTriggerCreateWizard\fourthpage.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="mainwindow.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <ClInclude Include="data\mdaandtriggerconnector.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="data\mdataacquisition.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <CustomBuild Include="wizard\MDataAcquisitionWizard\mdataacquitionwizard.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <ClInclude Include="data\mrtsdatabase.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <CustomBuild Include="ui\mscrollarea.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ui\msplitter.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ui\mtabwidget.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ui\mtitlewidget.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <ClInclude Include="ui\mtopologylabel.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <CustomBuild Include="ui\mtreewidget.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <ClInclude Include="data\mtrigger.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <CustomBuild Include="wizard\MTriggerCreateWizard\mtriggercreatewizard.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <ClInclude Include="mutility.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <CustomBuild Include="propertywidget.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="rtwavewindow.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="rtwavewindowtitle.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="wizard\MTriggerCreateWizard\secondpage.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="statusinfowidget.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="systemstatusframe.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <ClInclude Include="test1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <CustomBuild Include="wizard\MTriggerCreateWizard\thirdpage.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <ClInclude Include="topologydaitem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <CustomBuild Include="topologypage.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <ClInclude Include="topologytriggeritem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="wizard\MDataAcquisitionWizard\triggerallocator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <CustomBuild Include="wizard\MDataAcquisitionWizard\triggercomponentcombobox.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="wavetriggerwidget.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="debug\moc_channelcombobox.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="release\moc_channelcombobox.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="debug\moc_dafirstpage.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="release\moc_dafirstpage.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="debug\moc_dafourthpage.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="release\moc_dafourthpage.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="debug\moc_dasecondpage.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="release\moc_dasecondpage.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="debug\moc_dathirdpage.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="release\moc_dathirdpage.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="debug\moc_devicedataacquisitionlist.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="release\moc_devicedataacquisitionlist.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="debug\moc_devicemanagepage.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="release\moc_devicemanagepage.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="debug\moc_devicetriggerlist.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="release\moc_devicetriggerlist.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="debug\moc_firstpage.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="release\moc_firstpage.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="debug\moc_fourthpage.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="release\moc_fourthpage.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="debug\moc_mainwindow.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="release\moc_mainwindow.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="debug\moc_mdataacquitionwizard.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="release\moc_mdataacquitionwizard.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="debug\moc_mscrollarea.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="release\moc_mscrollarea.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="debug\moc_msplitter.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="release\moc_msplitter.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="debug\moc_mtabwidget.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="release\moc_mtabwidget.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="debug\moc_mtitlewidget.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="release\moc_mtitlewidget.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="debug\moc_mtreewidget.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="release\moc_mtreewidget.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="debug\moc_mtriggercreatewizard.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="release\moc_mtriggercreatewizard.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="debug\moc_propertywidget.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="release\moc_propertywidget.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="debug\moc_rtwavewindow.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="release\moc_rtwavewindow.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="debug\moc_rtwavewindowtitle.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="release\moc_rtwavewindowtitle.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="debug\moc_secondpage.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="release\moc_secondpage.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="debug\moc_statusinfowidget.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="release\moc_statusinfowidget.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="debug\moc_systemstatusframe.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="release\moc_systemstatusframe.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="debug\moc_thirdpage.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="release\moc_thirdpage.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="debug\moc_topologypage.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="release\moc_topologypage.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="debug\moc_triggercomponentcombobox.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="release\moc_triggercomponentcombobox.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="debug\moc_wavetriggerwidget.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="release\moc_wavetriggerwidget.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="debug\qrc_MSRTS.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="release\qrc_MSRTS.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MSRTS_cn.ts">
+      <Filter>Translation Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\32x32.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <CustomBuild Include="MSRTS.qrc">
+      <Filter>Resource Files</Filter>
+    </CustomBuild>
+    <None Include="qm\MSRTS_cn.qm">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\icon\ad_abnormal16x16.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\icon\ad_normal16x16.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\icon\ad_stop16x16.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\icon\addtrigger.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\icon\auto_config.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\cg_1.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\cg_2.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\cg_3.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\icon\copy.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\da_01.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\da_02.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\da_03.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\da_04.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\icon\delete.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\icon\device_manager.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\icon\edit.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\gd_1.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\gd_2.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\gd_3.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\gd_4.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="qss\mainwindow.qss">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\icon\save.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\sc_1.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\sc_2.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\sc_3.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\icon\startsample.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\system_status.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="qss\tabwidget.qss">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\test1.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\test2.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\test3.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\tip.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\icon\topology.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\icon\trigger_abnormal16x16.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\icon\trigger_config.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\icon\trigger_normal16x16.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\icon\trigger_normal24x24.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\icon\trigger_stop16x16.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\triggertest0.PNG">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\triggertest1.PNG">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\triggertest2.PNG">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\triggertest3.PNG">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\tw_01.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\tw_02.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\tw_03.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\tw_04.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\wavetest.PNG">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\wj_03.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\yc_1.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\yc_2.png">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+</Project>

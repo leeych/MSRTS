@@ -1,0 +1,341 @@
+#include <QtGui>
+#include "mainwindow.h"
+#include "mutility.h"
+#include "ui/mtitlewidget.h"
+#include "statusinfowidget.h"
+#include "wizard/MTriggerCreateWizard/mtriggercreatewizard.h"
+#include "wizard/MDataAcquisitionWizard/mdataacquitionwizard.h"
+
+MainWindow::MainWindow(QWidget *parent) :
+    QMainWindow(parent)
+{
+    resize(1000,600);
+    move(200,200);
+    setFocus();
+
+    infodisplayframe_ = new SystemStatusFrame;
+    StatusInfoWidget* statusInfoWidget = new StatusInfoWidget;
+    main_tab_window_ = new MTabWidget;
+    runtime_wave_window_ = new RTWaveWindow;
+    main_tab_window_->addTab(runtime_wave_window_,runtime_wave_window_->widget_name());
+    device_manager_page_ = new DeviceManagePage;
+    topology_page_ = new TopologyPage;
+
+    topology_scrollarea_ = new MScrollArea;
+    topology_scrollarea_->setFocusPolicy(Qt::NoFocus);
+    topology_scrollarea_->setFrameStyle(QFrame::NoFrame);
+    topology_scrollarea_->setWidget(topology_page_);
+    topology_scrollarea_->setWidgetResizable(false);
+    topology_scrollarea_->setStyleSheet("background-color: rgb(233,246,254);");
+
+    left_splitter_ = new QSplitter(Qt::Vertical);
+    left_splitter_->addWidget(infodisplayframe_);
+    left_splitter_->addWidget(statusInfoWidget);
+
+    main_splitter_ = new MSplitter(Qt::Horizontal, MSplitterLeft,this);
+    main_splitter_->addWidget(left_splitter_);
+    main_splitter_->addWidget(main_tab_window_);
+
+    QList<int> listMain;
+    QSize szMain = size();
+    listMain.push_back(204);
+    listMain.push_back(szMain.width() - 204);
+    main_splitter_->setSizes(listMain);
+
+    setCentralWidget(main_splitter_);
+
+    CreateActions();
+    CreateMenus();
+    CreateToolbar();
+
+    setStyleSheet(QLatin1String(fetchQrc(":/qss/mainwindow.qss")));
+
+    connect(infodisplayframe_,SIGNAL(treeWidgetDoubleClicked(int)),runtime_wave_window_,SLOT(ShowWave(int)));
+    connect(topology_page_,SIGNAL(TriggerClicked(int)),this,SLOT(OnTopologyTriggerClicked(int)));
+    connect(topology_page_,SIGNAL(DAClicked(int)),this,SLOT(OnTopologyDAClicked(int)));
+}
+
+void MainWindow::CreateFileAction()
+{
+    QString dir;
+    getImageDir(dir);
+
+    save_action_ = new QAction(tr("Save"), this);
+    save_action_->setIcon(QIcon(dir + "/icon/save.png"));
+//    save_action_->setShortcut(QKeySequence::Save);
+    save_action_->setStatusTip(tr("Save"));
+    connect(save_action_, SIGNAL(triggered()), this, SLOT(unused()));
+
+    close_action_ = new QAction(tr("Close"), this);
+    close_action_->setIcon(QIcon(dir + "32x32.png"));
+//    close_action_->setShortcut(QKeySequence::New);
+    close_action_->setStatusTip(tr("Close"));
+    connect(close_action_, SIGNAL(triggered()), this, SLOT(close()));
+}
+
+void MainWindow::CreateDeviceManagerAction()
+{
+    QString dir;
+    getImageDir(dir);
+
+    addtrigger_action_ = new QAction(tr("Add trigger"), this);
+    addtrigger_action_->setIcon(QIcon(dir + "32x32.png"));
+//    addtrigger_action_->setShortcut(QKeySequence::Save);
+    addtrigger_action_->setStatusTip(tr("Add trigger"));
+    connect(addtrigger_action_, SIGNAL(triggered()), this, SLOT(onAddTriggerAction()));
+
+    triggerlist_action_ = new QAction(tr("Trigger list"), this);
+    triggerlist_action_->setIcon(QIcon(dir + "32x32.png"));
+//    triggerlist_action_->setShortcut(QKeySequence::Save);
+    triggerlist_action_->setStatusTip(tr("trigger list"));
+    connect(triggerlist_action_, SIGNAL(triggered()), this, SLOT(unused()));
+
+    adddatacapture_action_ = new QAction(tr("Add data capture"), this);
+    adddatacapture_action_->setIcon(QIcon(dir + "32x32.png"));
+//    adddatacapture_action_->setShortcut(QKeySequence::Save);
+    adddatacapture_action_->setStatusTip(tr("Add data capture"));
+    connect(adddatacapture_action_, SIGNAL(triggered()), this, SLOT(onAddDataAcqisitionAction()));
+
+    datacapturelist_action_ = new QAction(tr("Data capture list"), this);
+    datacapturelist_action_->setIcon(QIcon(dir + "32x32.png"));
+//    datacapturelist_action_->setShortcut(QKeySequence::Save);
+    datacapturelist_action_->setStatusTip(tr("Data capture list"));
+    connect(datacapturelist_action_, SIGNAL(triggered()), this, SLOT(unused()));
+
+}
+
+void MainWindow::CreateWindowAction()
+{
+    QString dir;
+    getImageDir(dir);
+
+    startsample_action_ = new QAction(tr("Start sample"), this);
+    startsample_action_->setIcon(QIcon(dir + "32x32.png"));
+//    startsample_action_->setShortcut(QKeySequence::Save);
+    startsample_action_->setStatusTip(tr("Start sample"));
+    connect(startsample_action_, SIGNAL(triggered()), this, SLOT(unused()));
+
+    topology_action_ = new QAction(tr("Topology"), this);
+    topology_action_->setIcon(QIcon(dir + "32x32.png"));
+//    topology_action_->setShortcut(QKeySequence::Save);
+    topology_action_->setStatusTip(tr("Topology"));
+    connect(topology_action_, SIGNAL(triggered()), this, SLOT(unused()));
+
+    trigger_setting_action_ = new QAction(tr("Trigger setting"), this);
+    trigger_setting_action_->setIcon(QIcon(dir + "32x32.png"));
+//    trigger_setting_action_->setShortcut(QKeySequence::Save);
+    trigger_setting_action_->setStatusTip(tr("Trigger setting"));
+    connect(trigger_setting_action_, SIGNAL(triggered()), this, SLOT(unused()));
+
+    location_method_action_ = new QAction(tr("location method"), this);
+    location_method_action_->setIcon(QIcon(dir + "32x32.png"));
+//    location_method_action_->setShortcut(QKeySequence::Save);
+    location_method_action_->setStatusTip(tr("location method"));
+    connect(location_method_action_, SIGNAL(triggered()), this, SLOT(unused()));
+
+    focalmechanism_action_ = new QAction(tr("focal mechanism"), this);
+    focalmechanism_action_->setIcon(QIcon(dir + "32x32.png"));
+//    focalmechanism_action_->setShortcut(QKeySequence::Save);
+    focalmechanism_action_->setStatusTip(tr("focal mechanism"));
+    connect(focalmechanism_action_, SIGNAL(triggered()), this, SLOT(unused()));
+}
+
+void MainWindow::CreateHelpAction()
+{
+    QString dir;
+    getImageDir(dir);
+
+    about_action_ = new QAction(tr("About"), this);
+    about_action_->setIcon(QIcon(dir + "32x32.png"));
+    about_action_->setShortcut(QKeySequence::New);
+    about_action_->setStatusTip(tr("About"));
+    connect(about_action_, SIGNAL(triggered()), this, SLOT(unused()));
+}
+
+void MainWindow::CreateToolBarButton()
+{
+    QString dir;
+    getImageDir(dir);
+    save_button_ = new QToolButton(this);
+    save_button_->setStatusTip(tr("aaa"));
+//    save_button_->setShortcut(QKeySequence::New);
+    save_button_->setToolButtonStyle(Qt::ToolButtonIconOnly);
+    QString save_button_qss = "QToolButton:!hover:!pressed{border-image:url(" + dir + "/icon/save.png)}"
+                           "QToolButton:hover{border-image:url(" + dir + "/icon/save.png)}"
+                           "QToolButton:pressed{border-image:url(" + dir + "/icon/save.png)}";
+    save_button_->setStyleSheet(save_button_qss);
+    connect(save_button_, SIGNAL(clicked()), this, SLOT(unused()));
+
+    start_sample_button_ = new QToolButton(this);
+    start_sample_button_->setStatusTip(tr("aaa"));
+//    start_sample_button_->setShortcut(QKeySequence::New);
+    start_sample_button_->setToolButtonStyle(Qt::ToolButtonIconOnly);
+    QString start_sample_button_qss = "QToolButton:!hover:!pressed{border-image:url(" + dir + "/icon/startsample.png)}"
+                           "QToolButton:hover{border-image:url(" + dir + "/icon/startsample.png)}"
+                           "QToolButton:pressed{border-image:url(" + dir + "/icon/startsample.png)}";
+    start_sample_button_->setStyleSheet(start_sample_button_qss);
+    connect(start_sample_button_, SIGNAL(clicked()), this, SLOT(unused()));
+//    add_data_capture_button_ = new QToolButton;
+//    add_data_capture_button_->setStatusTip(tr("Create a new mswa file"));
+//    add_data_capture_button_->setShortcut(QKeySequence::New);
+//    add_data_capture_button_->setToolButtonStyle(Qt::ToolButtonTextUnderIcon);
+//    QString add_data_capture_qss = "QToolButton:!hover:!pressed{border-image:url(" + dir + "/32x32.png)}"
+//                           "QToolButton:hover{border-image:url(" + dir + "/32x32.png)}"
+//                           "QToolButton:pressed{border-image:url(" + dir + "/32x32.png)}";
+//    add_data_capture_button_->setStyleSheet(add_data_capture_qss);
+//    connect(add_data_capture_button_, SIGNAL(clicked()), this, SLOT(unused()));
+
+//    add_trigger_button_ = new QToolButton;
+//    add_trigger_button_->setStatusTip(tr("Create a new mswa file"));
+//    add_trigger_button_->setShortcut(QKeySequence::New);
+//    add_trigger_button_->setToolButtonStyle(Qt::ToolButtonTextUnderIcon);
+//    QString add_trigger_qss = "QToolButton:!hover:!pressed{border-image:url(" + dir + "/32x32.png)}"
+//                           "QToolButton:hover{border-image:url(" + dir + "/32x32.png)}"
+//                           "QToolButton:pressed{border-image:url(" + dir + "/32x32.png)}";
+//    add_trigger_button_->setStyleSheet(add_trigger_qss);
+//    connect(add_trigger_button_, SIGNAL(clicked()), this, SLOT(unused()));
+
+    topology_button_ = new QToolButton;
+    topology_button_->setStatusTip(tr("Create a new mswa file"));
+//    topology_button_->setShortcut(QKeySequence::New);
+    topology_button_->setToolButtonStyle(Qt::ToolButtonTextUnderIcon);
+    QString topology_qss = "QToolButton:!hover:!pressed{border-image:url(" + dir + "/icon/topology.png)}"
+                           "QToolButton:hover{border-image:url(" + dir + "/icon/topology.png)}"
+                           "QToolButton:pressed{border-image:url(" + dir + "/icon/topology.png)}";
+    topology_button_->setStyleSheet(topology_qss);
+    connect(topology_button_, SIGNAL(clicked()), this, SLOT(OnToolButtonTopologyClicked()));
+
+    trigger_setting_button_ = new QToolButton;
+    trigger_setting_button_->setStatusTip(tr("Create a new mswa file"));
+//    trigger_setting_button_->setShortcut(QKeySequence::New);
+    trigger_setting_button_->setToolButtonStyle(Qt::ToolButtonTextUnderIcon);
+    QString trigger_setting_qss = "QToolButton:!hover:!pressed{border-image:url(" + dir + "/icon/trigger_config.png)}"
+                           "QToolButton:hover{border-image:url(" + dir + "/icon/trigger_config.png)}"
+                           "QToolButton:pressed{border-image:url(" + dir + "/icon/trigger_config.png)}";
+    trigger_setting_button_->setStyleSheet(trigger_setting_qss);
+    connect(trigger_setting_button_, SIGNAL(clicked()), this, SLOT(unused()));
+
+    auto_setting_button_ = new QToolButton;
+    auto_setting_button_->setStatusTip(tr("Create a new mswa file"));
+//    auto_setting_button_->setShortcut(QKeySequence::New);
+    auto_setting_button_->setToolButtonStyle(Qt::ToolButtonTextUnderIcon);
+    QString auto_setting_qss = "QToolButton:!hover:!pressed{border-image:url(" + dir + "/icon/auto_config.png)}"
+                           "QToolButton:hover{border-image:url(" + dir + "/icon/auto_config.png)}"
+                           "QToolButton:pressed{border-image:url(" + dir + "/icon/auto_config.png)}";
+    auto_setting_button_->setStyleSheet(auto_setting_qss);
+    connect(auto_setting_button_, SIGNAL(clicked()), this, SLOT(unused()));
+
+    device_manager_button_ = new QToolButton;
+    device_manager_button_->setStatusTip(tr("Create a new mswa file"));
+//    device_manager_button_->setShortcut(QKeySequence::New);
+    device_manager_button_->setToolButtonStyle(Qt::ToolButtonTextUnderIcon);
+    QString device_manager_qss = "QToolButton:!hover:!pressed{border-image:url(" + dir + "/icon/device_manager.png)}"
+                           "QToolButton:hover{border-image:url(" + dir + "/icon/device_manager.png)}"
+                           "QToolButton:pressed{border-image:url(" + dir + "/icon/device_manager.png)}";
+    device_manager_button_->setStyleSheet(device_manager_qss);
+    connect(device_manager_button_, SIGNAL(clicked()), this, SLOT(OnToolButtonDeviceManagerClicked()));
+}
+
+void MainWindow::CreateActions()
+{
+    CreateFileAction();
+    CreateDeviceManagerAction();
+    CreateWindowAction();
+    CreateHelpAction();
+}
+
+void MainWindow::CreateMenus()
+{
+    file_menu_ = menuBar()->addMenu(tr("File"));
+    file_menu_->addAction(save_action_);
+    file_menu_->addAction(close_action_);
+
+    device_manager_menu_ = menuBar()->addMenu(tr("DeviceManager"));
+    device_manager_menu_->addAction(addtrigger_action_);
+    device_manager_menu_->addAction(triggerlist_action_);
+    device_manager_menu_->addAction(adddatacapture_action_);
+    device_manager_menu_->addAction(datacapturelist_action_);
+
+    window_menu_ = menuBar()->addMenu(tr("Window"));
+    window_menu_->addAction(startsample_action_);
+    window_menu_->addAction(topology_action_);
+    window_menu_->addAction(trigger_setting_action_);
+    window_menu_->addAction(location_method_action_);
+    window_menu_->addAction(focalmechanism_action_);
+
+    help_menu_ = menuBar()->addMenu(tr("Help"));
+    help_menu_->addAction(about_action_);
+}
+
+void MainWindow::CreateToolbar()
+{
+    main_toolbar_ = new QToolBar(tr("Toolbar"),this);
+    main_toolbar_->setIconSize(QSize(32, 32));
+
+    CreateToolBarButton();
+    main_toolbar_->addWidget(save_button_);
+//    main_toolbar_->addWidget(add_data_capture_button_);
+//    main_toolbar_->addWidget(add_trigger_button_);
+    main_toolbar_->addWidget(start_sample_button_);
+    main_toolbar_->addWidget(topology_button_);
+    main_toolbar_->addWidget(trigger_setting_button_);
+    main_toolbar_->addWidget(auto_setting_button_);
+    main_toolbar_->addWidget(device_manager_button_);
+    addToolBar(Qt::TopToolBarArea, main_toolbar_);
+}
+
+void MainWindow::UpdateDataToTree()
+{
+    infodisplayframe_->UpdateDataToTree();
+}
+
+void MainWindow::unused()
+{
+
+}
+
+void MainWindow::onAddDataAcqisitionAction()
+{
+    MDataAcquitionWizard *wizard = new MDataAcquitionWizard;
+    wizard->exec();
+}
+
+void MainWindow::onAddTriggerAction()
+{
+    MTriggerCreateWizard *wizard = new MTriggerCreateWizard;
+    wizard->run();
+
+    device_manager_page_->UpdateTriggerList();
+}
+
+void MainWindow::OnToolButtonDeviceManagerClicked()
+{
+    if(device_manager_page_ != NULL)
+    {
+        main_tab_window_->addTab(device_manager_page_,device_manager_page_->widget_name());
+        main_tab_window_->changeTab(device_manager_page_->widget_name());
+    }
+}
+
+void MainWindow::OnToolButtonTopologyClicked()
+{
+    if(topology_page_ != NULL)
+    {
+        main_tab_window_->addTab(topology_scrollarea_,topology_page_->widget_name());
+        main_tab_window_->changeTab(topology_page_->widget_name());
+        topology_page_->UpdateData();
+    }
+}
+
+void MainWindow::OnTopologyTriggerClicked(int id)
+{
+    OnToolButtonDeviceManagerClicked();
+    device_manager_page_->ChangeTriggerListPage(id);
+
+}
+
+void MainWindow::OnTopologyDAClicked(int id)
+{
+    OnToolButtonDeviceManagerClicked();
+    device_manager_page_->ChangeDAListPage(id);
+}

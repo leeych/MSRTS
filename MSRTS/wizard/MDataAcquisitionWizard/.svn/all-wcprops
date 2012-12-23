@@ -1,0 +1,89 @@
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/miseis/!svn/ver/891/mmps/trunk/RTS/MSRTS/wizard/MDataAcquisitionWizard
+END
+dafirstpage.h
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/miseis/!svn/ver/891/mmps/trunk/RTS/MSRTS/wizard/MDataAcquisitionWizard/dafirstpage.h
+END
+dafourthpage.h
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/miseis/!svn/ver/891/mmps/trunk/RTS/MSRTS/wizard/MDataAcquisitionWizard/dafourthpage.h
+END
+triggercomponentcombobox.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/miseis/!svn/ver/891/mmps/trunk/RTS/MSRTS/wizard/MDataAcquisitionWizard/triggercomponentcombobox.cpp
+END
+channelcombobox.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/miseis/!svn/ver/891/mmps/trunk/RTS/MSRTS/wizard/MDataAcquisitionWizard/channelcombobox.cpp
+END
+dathirdpage.h
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/miseis/!svn/ver/891/mmps/trunk/RTS/MSRTS/wizard/MDataAcquisitionWizard/dathirdpage.h
+END
+dasecondpage.h
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/miseis/!svn/ver/891/mmps/trunk/RTS/MSRTS/wizard/MDataAcquisitionWizard/dasecondpage.h
+END
+mdataacquitionwizard.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/miseis/!svn/ver/891/mmps/trunk/RTS/MSRTS/wizard/MDataAcquisitionWizard/mdataacquitionwizard.cpp
+END
+triggercomponentcombobox.h
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/miseis/!svn/ver/891/mmps/trunk/RTS/MSRTS/wizard/MDataAcquisitionWizard/triggercomponentcombobox.h
+END
+channelcombobox.h
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/miseis/!svn/ver/891/mmps/trunk/RTS/MSRTS/wizard/MDataAcquisitionWizard/channelcombobox.h
+END
+dafirstpage.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/miseis/!svn/ver/891/mmps/trunk/RTS/MSRTS/wizard/MDataAcquisitionWizard/dafirstpage.cpp
+END
+dafourthpage.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/miseis/!svn/ver/891/mmps/trunk/RTS/MSRTS/wizard/MDataAcquisitionWizard/dafourthpage.cpp
+END
+mdataacquitionwizard.h
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/miseis/!svn/ver/891/mmps/trunk/RTS/MSRTS/wizard/MDataAcquisitionWizard/mdataacquitionwizard.h
+END
+dathirdpage.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/miseis/!svn/ver/891/mmps/trunk/RTS/MSRTS/wizard/MDataAcquisitionWizard/dathirdpage.cpp
+END
+dasecondpage.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/miseis/!svn/ver/891/mmps/trunk/RTS/MSRTS/wizard/MDataAcquisitionWizard/dasecondpage.cpp
+END
